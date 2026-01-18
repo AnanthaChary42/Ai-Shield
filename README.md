@@ -39,16 +39,22 @@ The primary objectives of this project are:
 ## 4. Project Structure
 
 ```
+Ai-Shield/
 ├── frontend/
-│   └── index.html             # User interface, webcam capture, WebSocket client
+│   └── index.html              # User interface, webcam capture, WebSocket client
 │
 ├── websocket/
-│   ├── socket.py             # WebSocket server (entry point)
-│   ├── app.py                 # Core proctoring session logic
-│   ├── phone_detector.py      # Mobile phone detection (YOLO)
-│   ├── attention_engine.py    # Attention scoring and alert rules
+│   ├── socket.py               # WebSocket server (entry point)
+│   ├── app.py                  # Core proctoring session logic
+│   ├── attention_engine.py     # Attention scoring and alert rules
+│   ├── face_gaze_headpose.py   # Face detection, gaze tracking, head pose estimation
+│   ├── phone_detector.py       # Mobile phone detection (YOLOv8)
+│   └── yolov8n.pt               # Pretrained YOLOv8 model weights
 │
+├── .gitignore
+├── requirements.txt
 └── README.md
+
 ```
 
 Only the **frontend** and **websocket** directories are included to maintain a clean and secure repository structure.
