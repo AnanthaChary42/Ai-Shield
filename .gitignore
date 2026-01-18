@@ -1,0 +1,36 @@
+# ===============================
+# Ignore everything by default
+# ===============================
+/*
+
+# ===============================
+# Do not ignore .gitignore itself
+# ===============================
+!/.gitignore
+
+# ===============================
+# Allow core project folders
+# ===============================
+!/frontend/
+!/frontend/**
+
+!/websocket/
+!/websocket/**
+
+# ===============================
+# Allow documentation & config
+# ===============================
+!README.md
+!**/README.md
+!requirements.txt
+
+# ===============================
+# Python cache (explicitly ignored)
+# ===============================
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Extra safety for websocket cache
+/websocket/__pycache__/
+/websocket/__pycache__/**
